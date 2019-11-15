@@ -21,6 +21,12 @@ A new branch 9.3-backports has been created to provide bug fixes and small impro
 In the cppTango project we would like to move to C++11/C++14.
 For this we would require newer minimum compiler versions.
 It would be interesting to hear which old OS versions still need to be supported.
+
+C++11 full support in gcc 4.8
+C++14 full support in gcc 5.0
+
+C++11 is a requirement for next year or so, C++14 is nice to have but can wait some time
+
 ### Require newer cmake version. 
 As we move to more C++11 features, it would avoid a lot of additional work if we could use a newer cmake
 version which has the required checks builtin. 
@@ -30,12 +36,22 @@ Older distros can just download/compile a newer cmake version version as we do n
 ### cppTango next release number
 cppTango next release number (9.4 or 10.0?) [#593](https://github.com/tango-controls/cppTango/pull/593)
 
+Preference is for 9.4
+Still the issue with SONAME needs to be solved. Do we have to change it for 9.4 stated that is not binary compatible?
+The soname going to be tango94 (TB).
+
 ### Stalled Pull Requests
 
 - Question raised in [#555](https://github.com/tango-controls/cppTango/pull/555) (Fix crash during alarm state evaluation if attribute value is not set)
+
+Decided to fix the crash but do not modify automagically device State and/or Status, see mail exchange.
+
 - Questions raised in [#504](https://github.com/tango-controls/cppTango/pull/504) (PR to fix #368): Pushing events for State and Status with quality factor and timestamp.
 - [#620](https://github.com/tango-controls/cppTango/issues/620), [#540](https://github.com/tango-controls/cppTango/issues/540) 
 and [#592](https://github.com/tango-controls/cppTango/issues/592) follow-up?
+
+Check 692 and 540 with Giacomo
+
 - [#551](https://github.com/tango-controls/cppTango/pull/551)) to implement the 
 server_init_hook() feature. Changes were requested by Thomas Braun.
 - [#480](https://github.com/tango-controls/cppTango/pull/480): DevEnum Support for commands
@@ -64,6 +80,10 @@ ESRF would like to get a fix to [pytango#268](https://github.com/tango-controls/
 like to get solved first.
 
 ## AOB
+
+POGO update only affecting PythonHL code geeration.
+New github tango-controls-tools organization
+Doodle poll for next meeting
 
 ## Status of [Actions defined in the previous meetings](https://github.com/tango-controls/tango-kernel-followup/blob/master/2019-05-28/Minutes.md#summary-of-remaining-actions)
 
